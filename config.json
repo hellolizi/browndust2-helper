@@ -1,0 +1,245 @@
+{
+  "window": {
+    "title": "BrownDust II",
+    "class": "UnityWndClass"
+  },
+  "client": [
+    1920,
+    1080
+  ],
+  "fps": 4.0,
+  "api": {
+    "base_url": "https://api.deepseek.com/v1",
+    "key": "",
+    "model": "deepseek-chat"
+  },
+  "hotkey": {
+    "vk": 113,
+    "interval": 2.0,
+    "states": [
+      "story",
+      "choice"
+    ]
+  },
+  "downscale": 4,
+  "watchdog": {
+    "none_warn": 10,
+    "none_stop": 120
+  },
+  "dark": {
+    "luma": 14,
+    "pos": [
+      1605,
+      945
+    ],
+    "cooldown": 1.2,
+    "wait": 0.5
+  },
+  "fallback": {
+    "after": 15,
+    "points": [
+      [
+        1408,
+        180
+      ]
+    ],
+    "max": 0,
+    "cooldown": 15
+  },
+  "blind": {
+    "after": 4,
+    "points": [
+      [
+        960,
+        600
+      ],
+      [
+        960,
+        700
+      ],
+      [
+        960,
+        500
+      ]
+    ],
+    "max": 400,
+    "cooldown": 1.5
+  },
+  "anchors": [
+    {
+      "name": "victory",
+      "tpl": "templates/victory_done.bmp",
+      "roi": [
+        1300,
+        20,
+        420,
+        180
+      ],
+      "thr": 0.85,
+      "action": {
+        "type": "click",
+        "pos": [
+          1729,
+          1010
+        ]
+      },
+      "wait": 2.0,
+      "cooldown": 5.0
+    },
+    {
+      "name": "skipconfirm",
+      "tpl": "templates/skip_title.bmp",
+      "roi": [
+        700,
+        220,
+        600,
+        140
+      ],
+      "thr": 0.8,
+      "action": {
+        "type": "click",
+        "pos": [
+          975,
+          790
+        ]
+      },
+      "wait": 1.2,
+      "cooldown": 2.0
+    },
+    {
+      "name": "choice",
+      "tpl": "templates/choice_1.bmp",
+      "roi": [
+        600,
+        840,
+        760,
+        240
+      ],
+      "thr": 0.92,
+      "action": {
+        "type": "click",
+        "pos": [
+          960,
+          906
+        ]
+      },
+      "wait": 1.2,
+      "cooldown": 1.6
+    },
+    {
+      "name": "story",
+      "tpl": "templates/story_f2.bmp",
+      "roi": [
+        1500,
+        10,
+        400,
+        120
+      ],
+      "thr": 0.88,
+      "action": {
+        "type": "cycle",
+        "positions": [
+          [
+            960,
+            626
+          ],
+          [
+            960,
+            820
+          ],
+          [
+            960,
+            626
+          ],
+          [
+            960,
+            905
+          ],
+          [
+            960,
+            626
+          ],
+          [
+            960,
+            991
+          ]
+        ]
+      },
+      "wait": 0.35,
+      "cooldown": 1.2
+    },
+    {
+      "name": "play",
+      "tpl": "templates/play_btn.bmp",
+      "roi": [
+        380,
+        660,
+        560,
+        160
+      ],
+      "thr": 0.85,
+      "action": {
+        "type": "click",
+        "pos": [
+          550,
+          731
+        ]
+      },
+      "wait": 1.2,
+      "cooldown": 8.0
+    },
+    {
+      "name": "speed",
+      "tpl": "templates/skip_speed.bmp",
+      "roi": [
+        1700,
+        40,
+        200,
+        110
+      ],
+      "thr": 0.8,
+      "action": {
+        "type": "click",
+        "pos": [
+          1765,
+          95
+        ]
+      },
+      "wait": 0.7,
+      "cooldown": 6.0
+    },
+    {
+      "name": "ff",
+      "tpl": "templates/skip_ff.bmp",
+      "roi": [
+        1580,
+        40,
+        140,
+        110
+      ],
+      "thr": 0.8,
+      "action": {
+        "type": "click",
+        "pos": [
+          1655,
+          95
+        ]
+      },
+      "wait": 0.7,
+      "cooldown": 5.0
+    }
+  ],
+  "recover": {
+    "after": true,
+    "blind_triggers": 999,
+    "seconds": 45,
+    "max": 6
+  },
+  "burst": {
+    "clicks": 2,
+    "interval": 0.22
+  },
+  "digest": {
+    "interval": 2.0
+  }
+}

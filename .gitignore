@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+debug/
+logs/
+*.log
+*.err
+config.local.json
+team_config.json
+台词-*.md
+收益日报-*.md
+进度.md
